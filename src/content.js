@@ -1,10 +1,19 @@
+const parseColor = require('parse-color');
 const Vibrant = require('node-vibrant');
 
 function getThemeColor() {
     const themeColorTag = document.querySelector(`meta[name='theme-color']`);
     if (themeColorTag) {
-        return themeColorTag.getAttribute('content') ||
-               themeColorTag.getAttribute('value');
+        const cssColor =
+            themeColorTag.getAttribute('content') ||
+            themeColorTag.getAttribute('value');
+
+        if (cssColor) {
+            const parsed = parseColor(cssColor);
+            if (parsed && parsed.rgb) {
+                return parsed.rgb;
+            }
+        }
     }
 
     return null;
