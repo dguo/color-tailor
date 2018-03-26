@@ -19,7 +19,7 @@ function getThemeColor() {
     return null;
 }
 
-async function getFavicon() {
+function getFavicon() {
     let faviconLocation;
 
     const faviconTag = document.querySelector(`link[rel~='icon']`);
@@ -34,14 +34,23 @@ async function getDominantColor() {
     let color = getThemeColor();
 
     if (!color) {
-        const faviconLocation = await getFavicon();
+        const faviconLocation = getFavicon();
         console.log('favicon location:', faviconLocation);
-        const palette = await Vibrant.from(faviconLocation).getPalette();
-        color = palette.Vibrant.getRgb();
+        try {
+            const palette = await Vibrant.from(faviconLocation).getPalette();
+            if (palette) {
+                color = palette.Vibrant.getRgb();
+            }
+        } catch (error) {
+            console.error('error', error);
+        }
     }
 
     console.log('color:', color);
-    browser.runtime.sendMessage({themeColor: color});
+
+    if (color) {
+        browser.runtime.sendMessage({themeColor: color});
+    }
 }
 
 getDominantColor();
