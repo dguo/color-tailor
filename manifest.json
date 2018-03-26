@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "version": "0.1.0",
+    "name": "Color Tailor",
+    "permissions": ["theme"],
+    "background": {
+        "scripts": ["dist/background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["dist/content.js"]
+        }
+    ]
+}

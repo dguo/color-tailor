@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+from subprocess import run
+import sys
+
+parser = argparse.ArgumentParser(prog='./dev')
+subparsers = parser.add_subparsers(metavar='<command>', title='commands')
+
+DOCKER_RUN = ['docker', 'run', '-it', '--rm', '-v',
+              os.getcwd() + ':/src:cached', '-w=/src', 'node:8.10.0-alpine']
+
+def command(help):
+    def decorator(func):
+        parser = subparsers.add_parser(func.__name__, help=help)
+        parser.set_defaults(func=func)
+        return func
+    return decorator
+
+@command('Format the code')
+def format(args, remaining):
+    return run(DOCKER_RUN + ['yarn', 'run', 'format']).returncode
+
+@command('Lint the code')
+def lint(args, remaining):
+    return run(DOCKER_RUN + ['yarn', 'run', 'lint']).returncode
+
+@command('Run before committing')
+def precommit(args, remaining):
+    return run(DOCKER_RUN + ['yarn', 'run', 'prepublishOnly']).returncode
+
+@command('Bring up a shell')
+def sh(args, remaining):
+    return run(DOCKER_RUN + ['sh']).returncode
+
+@command('Start development')
+def start(args, remaining):
+    return run(DOCKER_RUN + ['yarn', 'start']).returncode
+
+@command('Run a Yarn command')
+def yarn(args, remaining):
+    return run(DOCKER_RUN + ['yarn'] + remaining or []).returncode
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        args, remaining = parser.parse_known_args()
+        returncode = args.func(args, remaining)
+        sys.exit(returncode)
+    else:
+        parser.print_help()
