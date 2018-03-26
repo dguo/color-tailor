@@ -47,5 +47,14 @@ function handleTabActivated(activeInfo) {
     }
 }
 
+function handleTabRemoved(tabId, removeInfo) {
+    if (removeInfo.isWindowClosing) {
+        delete themes[removeInfo.windowId];
+    } else if (themes[removeInfo.windowId]) {
+        delete themes[removeInfo.windowId][tabId];
+    }
+}
+
 browser.runtime.onMessage.addListener(changeTheme);
 browser.tabs.onActivated.addListener(handleTabActivated);
+browser.tabs.onRemoved.addListener(handleTabRemoved);
