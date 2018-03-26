@@ -46,6 +46,11 @@ async function getDominantColor() {
         }
     }
 
+    if (!color) {
+        // Use white as a fallback
+        color = [255, 255, 255];
+    }
+
     console.log('color:', color);
 
     if (color) {
