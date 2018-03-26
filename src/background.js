@@ -1,12 +1,16 @@
+const fontColorContrast = require('font-color-contrast');
+
 async function changeTheme(message) {
     console.log('message:', message);
-    const currentWindow = await browser.windows.getLastFocused();
-    browser.theme.update(currentWindow.id, {
-        colors: {
-            accentcolor: message.themeColor,
-            textcolor: '#fff'
-        }
-    });
+    if (message && message.themeColor) {
+        const currentWindow = await browser.windows.getLastFocused();
+        browser.theme.update(currentWindow.id, {
+            colors: {
+                accentcolor: message.themeColor,
+                textcolor: fontColorContrast(message.themeColor)
+            }
+        });
+    }
 }
 
 function handleTabActivated(activeInfo) {

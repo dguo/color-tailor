@@ -24,7 +24,9 @@
         "prepublishOnly": "yarn run format && yarn run lint && yarn run build",
         "start": "yarn install && yarn run build:watch"
     },
-    "dependencies": {},
+    "dependencies": {
+        "font-color-contrast": "^1.0.3"
+    },
     "devDependencies": {
         "eslint": "^4.19.1",
         "eslint-config-prettier": "^2.9.0",

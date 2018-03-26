@@ -1969,6 +1969,10 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
+font-color-contrast@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/font-color-contrast/-/font-color-contrast-1.0.3.tgz#77d88ff97c6bd095cfa9dfeb44624ba8ad717b6c"
+
 for-each@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.2.tgz#2c40450b9348e97f281322593ba96704b9abd4d4"
