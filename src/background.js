@@ -2,40 +2,56 @@ const fontColorContrast = require('font-color-contrast');
 
 const themes = {};
 
-function changeTheme(message, sender) {
-    if (message && message.themeColor && sender && sender.tab) {
-        const accentcolor = message.themeColor.map(color =>
-            Math.min(255, Math.round(color))
+// Black text on a white background
+const defaultTheme = {
+    colors: {
+        accentcolor: [255, 255, 255],
+        textcolor: [0, 0, 0]
+    }
+};
+
+function saveTheme(message, sender) {
+    if (!message || !sender || !sender.tab) {
+        return;
+    }
+
+    let theme = defaultTheme;
+
+    if (message.primaryColor) {
+        const accentcolor = message.primaryColor.map(rgb =>
+            Math.min(255, Math.round(rgb))
         );
-        const theme = {
+
+        theme = {
             colors: {
                 accentcolor,
                 textcolor: fontColorContrast(accentcolor)
             }
         };
+    }
 
-        const tabId = sender.tab.id;
-        const windowId = sender.tab.windowId;
+    themes[sender.tab.id] = theme;
 
-        themes[tabId] = theme;
-
-        if (sender.tab.active) {
-            browser.theme.update(windowId, theme);
-        }
+    if (sender.tab.active) {
+        browser.theme.update(sender.tab.windowId, theme);
     }
 }
 
 function handleTabActivated(activeInfo) {
-    const theme = themes[activeInfo.tabId] || null;
-    if (theme) {
-        browser.theme.update(activeInfo.windowId, theme);
+    let theme = themes[activeInfo.tabId];
+
+    if (!theme) {
+        theme = defaultTheme;
+        themes[activeInfo.tabId] = defaultTheme;
     }
+
+    browser.theme.update(activeInfo.windowId, theme);
 }
 
 function handleTabRemoved(tabId) {
     delete themes[tabId];
 }
 
-browser.runtime.onMessage.addListener(changeTheme);
+browser.runtime.onMessage.addListener(saveTheme);
 browser.tabs.onActivated.addListener(handleTabActivated);
 browser.tabs.onRemoved.addListener(handleTabRemoved);

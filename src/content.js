@@ -45,10 +45,7 @@ async function getDominantColor() {
         }
     }
 
-    // Use white as a fallback
-    color = color || [255, 255, 255];
-
-    browser.runtime.sendMessage({themeColor: color});
+    browser.runtime.sendMessage({primaryColor: color});
 }
 
 getDominantColor();
