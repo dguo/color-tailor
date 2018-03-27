@@ -35,22 +35,19 @@ async function getDominantColor() {
 
     if (!color) {
         const faviconLocation = getFavicon();
-        console.log('favicon location:', faviconLocation);
         try {
             const palette = await Vibrant.from(faviconLocation).getPalette();
             if (palette) {
-                console.log(palette);
                 color = palette.Vibrant.getRgb();
             }
         } catch (error) {
-            console.error('error', error);
+            // console.warn(error);
         }
     }
 
     // Use white as a fallback
     color = color || [255, 255, 255];
 
-    console.log('color:', color);
     browser.runtime.sendMessage({themeColor: color});
 }
 

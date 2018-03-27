@@ -3,8 +3,6 @@ const fontColorContrast = require('font-color-contrast');
 const themes = {};
 
 function changeTheme(message, sender) {
-    console.log('message:', message, sender);
-
     if (message && message.themeColor && sender && sender.tab) {
         const accentcolor = message.themeColor.map(color =>
             Math.min(255, Math.round(color))
@@ -28,14 +26,13 @@ function changeTheme(message, sender) {
 }
 
 function handleTabActivated(activeInfo) {
-    console.log('active tab:', activeInfo);
     const theme = themes[activeInfo.tabId] || null;
     if (theme) {
         browser.theme.update(activeInfo.windowId, theme);
     }
 }
 
-function handleTabRemoved(tabId, removeInfo) {
+function handleTabRemoved(tabId) {
     delete themes[tabId];
 }
 
