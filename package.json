@@ -25,13 +25,13 @@
         "start": "yarn install && yarn run build:watch"
     },
     "dependencies": {
-        "font-color-contrast": "^1.0.3"
+        "font-color-contrast": "^1.0.3",
+        "node-vibrant": "^3.0.0",
+        "parse-color": "^1.0.0"
     },
     "devDependencies": {
         "eslint": "^4.19.1",
         "eslint-config-prettier": "^2.9.0",
-        "node-vibrant": "^3.0.0",
-        "parse-color": "^1.0.0",
         "prettier": "^1.11.1",
         "webpack": "^4.2.0",
         "webpack-cli": "^2.0.13"
