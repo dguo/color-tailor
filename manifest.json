@@ -1,7 +1,14 @@
 {
     "manifest_version": 2,
-    "version": "0.1.0",
     "name": "Color Tailor",
+    "version": "0.1.0",
+    "author": "Danny Guo",
+    "homepage_url": "https://github.com/dguo/color-tailor",
+    "applications": {
+        "gecko": {
+            "id": "@color-tailor"
+        }
+    },
     "permissions": ["theme"],
     "background": {
         "scripts": ["dist/background.js"]
