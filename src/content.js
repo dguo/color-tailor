@@ -30,7 +30,7 @@ function getFavicon() {
     return faviconLocation || '/favicon.ico';
 }
 
-async function getDominantColor() {
+(async function getDominantColor() {
     let color = getThemeColor();
 
     if (!color) {
@@ -46,6 +46,4 @@ async function getDominantColor() {
     }
 
     browser.runtime.sendMessage({primaryColor: color});
-}
-
-getDominantColor();
+})();
