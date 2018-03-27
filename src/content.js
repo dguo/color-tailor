@@ -39,6 +39,7 @@ async function getDominantColor() {
         try {
             const palette = await Vibrant.from(faviconLocation).getPalette();
             if (palette) {
+                console.log(palette);
                 color = palette.Vibrant.getRgb();
             }
         } catch (error) {
@@ -46,16 +47,11 @@ async function getDominantColor() {
         }
     }
 
-    if (!color) {
-        // Use white as a fallback
-        color = [255, 255, 255];
-    }
+    // Use white as a fallback
+    color = color || [255, 255, 255];
 
     console.log('color:', color);
-
-    if (color) {
-        browser.runtime.sendMessage({themeColor: color});
-    }
+    browser.runtime.sendMessage({themeColor: color});
 }
 
 getDominantColor();
