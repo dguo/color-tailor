@@ -6,7 +6,8 @@
     "homepage_url": "https://github.com/dguo/color-tailor",
     "applications": {
         "gecko": {
-            "id": "@color-tailor"
+            "id": "@color-tailor",
+            "strict_min_version": "57.0a1"
         }
     },
     "permissions": ["theme"],

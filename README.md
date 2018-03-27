@@ -8,6 +8,9 @@ Order of precedence for determining the color:
 2. The dominant color in the [favicon](https://en.wikipedia.org/wiki/Favicon), as determined by [node-vibrant](https://github.com/akfish/node-vibrant)
 3. White as a fallback
 
+## Requirements
+Firefox 57 and above
+
 ## Prior Art
 Color Tailor was inspired by an [iTunes feature](https://stackoverflow.com/q/13637892/1481479) that would change UI colors on the fly to match album covers.
 
