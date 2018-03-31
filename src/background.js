@@ -35,8 +35,11 @@ async function saveTheme(message, sender) {
         return;
     }
 
-    const color =
-        message.themeColor || (await getFaviconColor(sender.tab.favIconUrl));
+    let color = message.themeColor;
+    // #ffffff (white) is a boring theme. Let's ignore it.
+    if (!color || (color[0] === 255 && color[1] === 255 && color[2] === 255)) {
+        color = await getFaviconColor(sender.tab.favIconUrl);
+    }
 
     const theme = !color
         ? defaultTheme
