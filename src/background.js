@@ -1,4 +1,8 @@
+/* eslint-disable no-console */
+
 const fontColorContrast = require('font-color-contrast');
+const loadImage = require('image-promise');
+const Vibrant = require('node-vibrant');
 
 const themes = {};
 
@@ -10,25 +14,41 @@ const defaultTheme = {
     }
 };
 
-function saveTheme(message, sender) {
+async function getFaviconColor(url) {
+    let color = null;
+
+    try {
+        const favicon = await loadImage(url);
+        const palette = await Vibrant.from(favicon).getPalette();
+        if (palette) {
+            color = palette.Vibrant.getRgb().map(rgb =>
+                Math.min(255, Math.round(rgb))
+            );
+        }
+    } catch (error) {
+        console.error(error);
+    }
+
+    return color;
+}
+
+async function saveTheme(message, sender) {
     if (!message || !sender || !sender.tab) {
+        console.warn('Invalid message or sender');
         return;
     }
 
-    let theme = defaultTheme;
+    const color =
+        message.themeColor || (await getFaviconColor(sender.tab.favIconUrl));
 
-    if (message.primaryColor) {
-        const accentcolor = message.primaryColor.map(rgb =>
-            Math.min(255, Math.round(rgb))
-        );
-
-        theme = {
-            colors: {
-                accentcolor,
-                textcolor: fontColorContrast(accentcolor)
-            }
-        };
-    }
+    const theme = !color
+        ? defaultTheme
+        : {
+              colors: {
+                  accentcolor: color,
+                  textcolor: fontColorContrast(color)
+              }
+          };
 
     themes[sender.tab.id] = theme;
 
@@ -38,20 +58,30 @@ function saveTheme(message, sender) {
 }
 
 function handleTabActivated(activeInfo) {
-    let theme = themes[activeInfo.tabId];
+    const theme = themes[activeInfo.tabId];
 
-    if (!theme) {
-        theme = defaultTheme;
-        themes[activeInfo.tabId] = defaultTheme;
+    if (theme) {
+        browser.theme.update(activeInfo.windowId, theme);
+    } else {
+        browser.tabs.sendMessage(activeInfo.tabId, null);
     }
-
-    browser.theme.update(activeInfo.windowId, theme);
 }
 
 function handleTabRemoved(tabId) {
     delete themes[tabId];
 }
 
+function handleTabUpdated(tabId, changeInfo) {
+    if (
+        changeInfo.status === 'complete' ||
+        changeInfo.favIconUrl ||
+        changeInfo.url
+    ) {
+        browser.tabs.sendMessage(tabId, null);
+    }
+}
+
 browser.runtime.onMessage.addListener(saveTheme);
 browser.tabs.onActivated.addListener(handleTabActivated);
 browser.tabs.onRemoved.addListener(handleTabRemoved);
+browser.tabs.onUpdated.addListener(handleTabUpdated);
