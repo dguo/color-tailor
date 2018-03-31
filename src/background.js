@@ -20,11 +20,8 @@ async function getFaviconColor(url) {
     try {
         const favicon = await loadImage(url);
         const palette = await Vibrant.from(favicon).getPalette();
-        if (palette) {
-            color = palette.Vibrant.getRgb().map(rgb =>
-                Math.min(255, Math.round(rgb))
-            );
-        }
+        const swatch = palette.Vibrant || palette.Muted;
+        color = swatch.getRgb().map(rgb => Math.min(255, Math.round(rgb)));
     } catch (error) {
         console.error(error);
     }
