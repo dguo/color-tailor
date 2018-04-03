@@ -26,9 +26,15 @@ def format(args, remaining):
 def lint(args, remaining):
     return run(DOCKER_RUN + ['yarn', 'run', 'lint']).returncode
 
-@command('Run before committing')
-def precommit(args, remaining):
-    return run(DOCKER_RUN + ['yarn', 'run', 'prepublishOnly']).returncode
+@command('Generate a zip file for releasing')
+def release(args, remaining):
+    rc = run(DOCKER_RUN + ['yarn', 'run', 'release']).returncode
+    if not rc:
+        rc = run(['git', 'archive', '-o' 'web-ext-artifacts/source-code.zip',
+                  'HEAD']).returncode
+        if not rc:
+            print('Updated the source code ZIP file')
+    return rc
 
 @command('Bring up a shell')
 def sh(args, remaining):

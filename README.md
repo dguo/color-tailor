@@ -9,7 +9,7 @@ Order of precedence for determining the color:
 3. White as a fallback
 
 ## Requirements
-* Firefox 57 (Quantum) and above
+* Firefox 60 and above
 
 ## Prior Art
 Color Tailor was inspired by an [iTunes feature](https://stackoverflow.com/q/13637892/1481479) that would change UI colors on the fly to match album covers.
