@@ -1,5 +1,5 @@
 # Color Tailor (work in progress) [![Build Status](https://travis-ci.org/dguo/color-tailor.svg?branch=master)](https://travis-ci.org/dguo/color-tailor)
-A [dyanmic Firefox
+A [dynamic Firefox
 theme](https://developer.mozilla.org/en-US/Add-ons/Themes/Theme_concepts#Dynamic_themes)
 that changes the theme to the current website's "primary" color.
 
