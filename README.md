@@ -1,7 +1,8 @@
 # Color Tailor [![Build Status](https://travis-ci.org/dguo/color-tailor.svg?branch=master)](https://travis-ci.org/dguo/color-tailor)
 A [dynamic Firefox
 theme](https://developer.mozilla.org/en-US/Add-ons/Themes/Theme_concepts#Dynamic_themes)
-that changes the theme to the current website's "primary" color.
+that changes the theme to the current website's "primary" color. Available in [Firefox
+Add-ons](https://addons.mozilla.org/en-US/firefox/addon/color-tailor/).
 
 Order of precedence for determining the color:
 1. The meta [theme-color](https://html.spec.whatwg.org/multipage/semantics.html#meta-theme-color) element
@@ -10,8 +11,10 @@ Order of precedence for determining the color:
 
 ![screenshot](https://i.imgur.com/uqJqd3A.png)
 
-## Requirements
-* Firefox 60 and above
+## Installation
+Install Color Tailor from the
+[Add-ons](https://addons.mozilla.org/en-US/firefox/addon/color-tailor/) page.
+Firefox 60 and above is required.
 
 ## Prior Art
 Color Tailor was inspired by an [iTunes feature](https://stackoverflow.com/q/13637892/1481479) that would change UI colors on the fly to match album covers.
