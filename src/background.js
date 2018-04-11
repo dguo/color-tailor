@@ -57,13 +57,22 @@ async function saveTheme(message, sender) {
     }
 }
 
-function handleTabActivated(activeInfo) {
+async function handleTabActivated(activeInfo) {
     const theme = themes[activeInfo.tabId];
 
     if (theme) {
         browser.theme.update(activeInfo.windowId, theme);
     } else {
-        browser.tabs.sendMessage(activeInfo.tabId, null);
+        try {
+            await browser.tabs.sendMessage(activeInfo.tabId, null);
+        } catch (error) {
+            /* We expect to end up here when the tab is not a normal page,
+               such as the new tab page or a page that is not allowed to run
+               content scripts (like addons.mozilla.org).
+               See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts
+               */
+            browser.theme.reset();
+        }
     }
 }
 
