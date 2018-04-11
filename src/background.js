@@ -71,7 +71,7 @@ async function handleTabActivated(activeInfo) {
                content scripts (like addons.mozilla.org).
                See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts
                */
-            browser.theme.reset();
+            browser.theme.reset(activeInfo.windowId);
         }
     }
 }
