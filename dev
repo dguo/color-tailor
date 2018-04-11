@@ -8,7 +8,7 @@ import sys
 parser = argparse.ArgumentParser(prog='./dev')
 subparsers = parser.add_subparsers(metavar='<command>', title='commands')
 
-DOCKER_RUN = ['docker', 'run', '-it', '--rm', '-v',
+DOCKER_RUN = ['docker', 'run', '--init', '-it', '--rm', '-v',
               os.getcwd() + ':/src:cached', '-w=/src', 'node:8.10.0-alpine']
 
 def command(help):
