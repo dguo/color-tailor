@@ -5,9 +5,14 @@ that changes the theme to the current website's "primary" color. Available in [F
 Add-ons](https://addons.mozilla.org/en-US/firefox/addon/color-tailor/).
 
 Order of precedence for determining the color:
-1. The meta [theme-color](https://html.spec.whatwg.org/multipage/semantics.html#meta-theme-color) element
+1. The meta [theme-color](https://html.spec.whatwg.org/multipage/semantics.html#meta-theme-color) element (except for pure white)
 2. The dominant color in the [favicon](https://en.wikipedia.org/wiki/Favicon), as determined by [node-vibrant](https://github.com/akfish/node-vibrant)
 3. White as a fallback
+
+Color Tailor was originally created for the [Firefox Quantum Extensions
+Challenge](https://extensionschallenge.com/). I wrote a [blog
+post](https://www.dannyguo.com/blog/building-dynamic-firefox-themes/) detailing
+my experience.
 
 ![screenshot](https://i.imgur.com/uqJqd3A.png)
 
