@@ -37,7 +37,7 @@
         "prettier": "^1.13.4",
         "web-ext": "^2.7.0",
         "webpack": "^4.14.0",
-        "webpack-cli": "^2.1.4"
+        "webpack-cli": "^3.0.8"
     },
     "eslintConfig": {
         "env": {
