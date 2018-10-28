@@ -26,6 +26,8 @@ Color Tailor was inspired by an [iTunes feature](https://stackoverflow.com/q/136
 
 Chrome on Android does a [similar thing](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android) with the toolbar color, and there is an [open issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1098544) to do the same for Firefox.
 
+[Vivaldi](https://vivaldi.com/) has this [feature](https://vivaldi.com/features/user-interface/) built-in.
+
 ## Other Themes
 * [Chromatastic](https://addons.mozilla.org/en-US/firefox/addon/chromatastic/): continuously cycles through colors
 * [Containers Theme](https://addons.mozilla.org/en-US/firefox/addon/containers-theme/): changes the theme color to match the active [container tab](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)
