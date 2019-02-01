@@ -27,7 +27,7 @@
     },
     "dependencies": {
         "font-color-contrast": "^1.0.3",
-        "image-promise": "^5.0.1",
+        "image-promise": "^6.0.0",
         "node-vibrant": "^3.0.0",
         "parse-color": "^1.0.0"
     },

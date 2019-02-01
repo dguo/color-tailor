@@ -2934,9 +2934,9 @@ ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
 
-image-promise@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/image-promise/-/image-promise-5.0.1.tgz#f6800d94b33f1476202409e69360f46e06d6baa6"
+image-promise@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/image-promise/-/image-promise-6.0.0.tgz#992bc1e4c754ea5087e9be2770eb8e8065a5ad4b"
 
 import-lazy@^2.1.0:
   version "2.1.0"
