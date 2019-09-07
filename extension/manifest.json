@@ -1,13 +1,13 @@
 {
     "manifest_version": 2,
     "name": "Color Tailor",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "author": "Danny Guo",
     "homepage_url": "https://github.com/dguo/color-tailor",
     "applications": {
         "gecko": {
             "id": "@color-tailor",
-            "strict_min_version": "60.0a1"
+            "strict_min_version": "63.0a1"
         }
     },
     "icons": {
