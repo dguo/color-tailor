@@ -9,8 +9,8 @@ const themes = {};
 // Black text on a white background
 const defaultTheme = {
     colors: {
-        accentcolor: [255, 255, 255],
-        textcolor: [0, 0, 0]
+        frame: [255, 255, 255],
+        tab_background_text: [0, 0, 0]
     }
 };
 
@@ -45,8 +45,8 @@ async function saveTheme(message, sender) {
         ? defaultTheme
         : {
               colors: {
-                  accentcolor: color,
-                  textcolor: fontColorContrast(color)
+                  frame: color,
+                  tab_background_text: fontColorContrast(color)
               }
           };
 

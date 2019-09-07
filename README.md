@@ -24,7 +24,7 @@ my experience.
 
 Install Color Tailor from the
 [Add-ons](https://addons.mozilla.org/en-US/firefox/addon/color-tailor/) page.
-Firefox 60 and above is required.
+Firefox 63 and above is required.
 
 ## Prior Art
 
