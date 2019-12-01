@@ -1,7 +1,7 @@
 # Color Tailor
 
 [![Mozilla Add-on](https://img.shields.io/amo/v/color-tailor)](https://addons.mozilla.org/en-US/firefox/addon/color-tailor/)
-[![Build Status](https://travis-ci.org/dguo/color-tailor.svg?branch=master)](https://travis-ci.org/dguo/color-tailor)
+[![CI status](https://github.com/dguo/color-tailor/workflows/CI/badge.svg)](https://github.com/dguo/color-tailor/actions?query=branch%3Amaster)
 
 A [dynamic Firefox
 theme](https://developer.mozilla.org/en-US/Add-ons/Themes/Theme_concepts#Dynamic_themes)
