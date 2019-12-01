@@ -1,7 +1,0 @@
-language: node_js
-script:
-    - yarn run format:check
-    - yarn run lint
-    - yarn run build:release
-    - yarn run web-ext lint
-    - yarn run web-ext build
