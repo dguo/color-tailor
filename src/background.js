@@ -6,14 +6,6 @@ const Vibrant = require('node-vibrant');
 
 const themes = {};
 
-// Black text on a white background
-const defaultTheme = {
-    colors: {
-        frame: [255, 255, 255],
-        tab_background_text: [0, 0, 0]
-    }
-};
-
 async function getFaviconColor(url) {
     let color = null;
 
@@ -42,13 +34,13 @@ async function saveTheme(message, sender) {
     }
 
     const theme = !color
-        ? defaultTheme
+        ? null
         : {
-              colors: {
-                  frame: color,
-                  tab_background_text: fontColorContrast(color)
-              }
-          };
+            colors: {
+                frame: color,
+                tab_background_text: fontColorContrast(color)
+            }
+        };
 
     themes[sender.tab.id] = theme;
 
