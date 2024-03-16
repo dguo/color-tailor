@@ -26,19 +26,19 @@
         "start": "yarn install && yarn run build:watch"
     },
     "dependencies": {
-        "font-color-contrast": "1.0.3",
-        "image-promise": "6.0.2",
-        "node-vibrant": "3.1.4",
+        "font-color-contrast": "11.1.0",
+        "image-promise": "6.1.1",
+        "node-vibrant": "3.2.1-alpha.1",
         "parse-color": "1.0.0"
     },
     "devDependencies": {
-        "eslint": "6.3.0",
-        "eslint-config-prettier": "6.2.0",
-        "prettier": "1.18.2",
+        "eslint": "8.57.0",
+        "eslint-config-prettier": "9.1.0",
+        "prettier": "3.2.5",
         "rimraf": "5.0.5",
-        "web-ext": "3.1.1",
-        "webpack": "4.39.3",
-        "webpack-cli": "3.3.8"
+        "web-ext": "7.11.0",
+        "webpack": "5.90.3",
+        "webpack-cli": "5.1.4"
     },
     "eslintConfig": {
         "env": {
