@@ -1,7 +1,7 @@
 # Color Tailor
 
 [![Mozilla Add-on](https://img.shields.io/amo/v/color-tailor)](https://addons.mozilla.org/en-US/firefox/addon/color-tailor/)
-[![CI status](https://github.com/dguo/color-tailor/workflows/CI/badge.svg)](https://github.com/dguo/color-tailor/actions?query=branch%3Amaster)
+[![CI status](https://github.com/dguo/color-tailor/workflows/CI/badge.svg)](https://github.com/dguo/color-tailor/actions?query=branch%3Amain)
 
 A [dynamic Firefox
 theme](https://developer.mozilla.org/en-US/Add-ons/Themes/Theme_concepts#Dynamic_themes)
@@ -44,4 +44,4 @@ Chrome on Android does a [similar thing](https://developers.google.com/web/updat
 
 ## License
 
-[MIT](https://github.com/dguo/color-tailor/blob/master/LICENSE)
+[MIT](https://github.com/dguo/color-tailor/blob/main/LICENSE)
