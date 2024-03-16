@@ -21,7 +21,7 @@ async function getFaviconColor(url) {
         const favicon = await loadImage(url);
         const palette = await Vibrant.from(favicon).getPalette();
         const swatch = palette.Vibrant || palette.Muted;
-        color = swatch.getRgb().map(rgb => Math.min(255, Math.round(rgb)));
+        color = swatch.getRgb().map((rgb) => Math.min(255, Math.round(rgb)));
     } catch (error) {
         console.error(error);
     }
