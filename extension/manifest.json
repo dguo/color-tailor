@@ -19,7 +19,7 @@
     },
     "permissions": ["<all_urls>", "tabs", "theme"],
     "background": {
-        "scripts": ["js/background.js"]
+        "scripts": ["src/background.js"]
     },
     "content_scripts": [
         {
