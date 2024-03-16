@@ -2497,16 +2497,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "color-tailor@workspace:."
   dependencies:
-    eslint: "npm:^6.3.0"
-    eslint-config-prettier: "npm:^6.2.0"
-    font-color-contrast: "npm:^1.0.3"
-    image-promise: "npm:^6.0.2"
-    node-vibrant: "npm:^3.1.4"
-    parse-color: "npm:^1.0.0"
-    prettier: "npm:^1.18.2"
-    web-ext: "npm:^3.1.1"
-    webpack: "npm:^4.39.3"
-    webpack-cli: "npm:^3.3.8"
+    eslint: "npm:6.3.0"
+    eslint-config-prettier: "npm:6.2.0"
+    font-color-contrast: "npm:1.0.3"
+    image-promise: "npm:6.0.2"
+    node-vibrant: "npm:3.1.4"
+    parse-color: "npm:1.0.0"
+    prettier: "npm:1.18.2"
+    rimraf: "npm:5.0.5"
+    web-ext: "npm:3.1.1"
+    webpack: "npm:4.39.3"
+    webpack-cli: "npm:3.3.8"
   languageName: unknown
   linkType: soft
 
@@ -3687,7 +3688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^6.2.0":
+"eslint-config-prettier@npm:6.2.0":
   version: 6.2.0
   resolution: "eslint-config-prettier@npm:6.2.0"
   dependencies:
@@ -3805,52 +3806,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^3.7.1":
-  version: 3.19.0
-  resolution: "eslint@npm:3.19.0"
-  dependencies:
-    babel-code-frame: "npm:^6.16.0"
-    chalk: "npm:^1.1.3"
-    concat-stream: "npm:^1.5.2"
-    debug: "npm:^2.1.1"
-    doctrine: "npm:^2.0.0"
-    escope: "npm:^3.6.0"
-    espree: "npm:^3.4.0"
-    esquery: "npm:^1.0.0"
-    estraverse: "npm:^4.2.0"
-    esutils: "npm:^2.0.2"
-    file-entry-cache: "npm:^2.0.0"
-    glob: "npm:^7.0.3"
-    globals: "npm:^9.14.0"
-    ignore: "npm:^3.2.0"
-    imurmurhash: "npm:^0.1.4"
-    inquirer: "npm:^0.12.0"
-    is-my-json-valid: "npm:^2.10.0"
-    is-resolvable: "npm:^1.0.0"
-    js-yaml: "npm:^3.5.1"
-    json-stable-stringify: "npm:^1.0.0"
-    levn: "npm:^0.3.0"
-    lodash: "npm:^4.0.0"
-    mkdirp: "npm:^0.5.0"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.8.2"
-    path-is-inside: "npm:^1.0.1"
-    pluralize: "npm:^1.2.1"
-    progress: "npm:^1.1.8"
-    require-uncached: "npm:^1.0.2"
-    shelljs: "npm:^0.7.5"
-    strip-bom: "npm:^3.0.0"
-    strip-json-comments: "npm:~2.0.1"
-    table: "npm:^3.7.8"
-    text-table: "npm:~0.2.0"
-    user-home: "npm:^2.0.0"
-  bin:
-    eslint: ./bin/eslint.js
-  checksum: 10c0/a0254f90dcc4b46b2b508360399be1dbe23f064f2fb5eb43772ca735de1708df3d887649be62c78d5f1578930e0426471040795c86d111b00b456403f705d623
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^6.3.0":
+"eslint@npm:6.3.0":
   version: 6.3.0
   resolution: "eslint@npm:6.3.0"
   dependencies:
@@ -3894,6 +3850,51 @@ __metadata:
   bin:
     eslint: ./bin/eslint.js
   checksum: 10c0/5684ed5ff87557568eb37d16c96d5f8a7ab84a19f6dc3ebee7e6a93d3954b4d8f66681c16cf20c339926ee06e9c735486293ecce3140805bb690ecada81e7c5c
+  languageName: node
+  linkType: hard
+
+"eslint@npm:^3.7.1":
+  version: 3.19.0
+  resolution: "eslint@npm:3.19.0"
+  dependencies:
+    babel-code-frame: "npm:^6.16.0"
+    chalk: "npm:^1.1.3"
+    concat-stream: "npm:^1.5.2"
+    debug: "npm:^2.1.1"
+    doctrine: "npm:^2.0.0"
+    escope: "npm:^3.6.0"
+    espree: "npm:^3.4.0"
+    esquery: "npm:^1.0.0"
+    estraverse: "npm:^4.2.0"
+    esutils: "npm:^2.0.2"
+    file-entry-cache: "npm:^2.0.0"
+    glob: "npm:^7.0.3"
+    globals: "npm:^9.14.0"
+    ignore: "npm:^3.2.0"
+    imurmurhash: "npm:^0.1.4"
+    inquirer: "npm:^0.12.0"
+    is-my-json-valid: "npm:^2.10.0"
+    is-resolvable: "npm:^1.0.0"
+    js-yaml: "npm:^3.5.1"
+    json-stable-stringify: "npm:^1.0.0"
+    levn: "npm:^0.3.0"
+    lodash: "npm:^4.0.0"
+    mkdirp: "npm:^0.5.0"
+    natural-compare: "npm:^1.4.0"
+    optionator: "npm:^0.8.2"
+    path-is-inside: "npm:^1.0.1"
+    pluralize: "npm:^1.2.1"
+    progress: "npm:^1.1.8"
+    require-uncached: "npm:^1.0.2"
+    shelljs: "npm:^0.7.5"
+    strip-bom: "npm:^3.0.0"
+    strip-json-comments: "npm:~2.0.1"
+    table: "npm:^3.7.8"
+    text-table: "npm:~0.2.0"
+    user-home: "npm:^2.0.0"
+  bin:
+    eslint: ./bin/eslint.js
+  checksum: 10c0/a0254f90dcc4b46b2b508360399be1dbe23f064f2fb5eb43772ca735de1708df3d887649be62c78d5f1578930e0426471040795c86d111b00b456403f705d623
   languageName: node
   linkType: hard
 
@@ -4410,7 +4411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"font-color-contrast@npm:^1.0.3":
+"font-color-contrast@npm:1.0.3":
   version: 1.0.3
   resolution: "font-color-contrast@npm:1.0.3"
   checksum: 10c0/4d599347c7072cade47c2f7109e61f6eee63a72fafb22768820bb64fec4d923daad4c57212f2d1cab0d00db726e8818946f561fea1fb16f759ebe0b8e989bc5d
@@ -4824,7 +4825,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.2.2, glob@npm:^10.3.10":
+"glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7":
   version: 10.3.10
   resolution: "glob@npm:10.3.10"
   dependencies:
@@ -5440,7 +5441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-promise@npm:^6.0.2":
+"image-promise@npm:6.0.2":
   version: 6.0.2
   resolution: "image-promise@npm:6.0.2"
   checksum: 10c0/5e821d496986f586a1b74ddc16e421cd9dc033ac749d4bd234637c9d1e0e5b8b0c3967fa04ced3277ab4d4101dcc531e6554a6245a899293c2dbd0fe01fc8ea5
@@ -7420,7 +7421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-vibrant@npm:^3.1.4":
+"node-vibrant@npm:3.1.4":
   version: 3.1.4
   resolution: "node-vibrant@npm:3.1.4"
   dependencies:
@@ -7901,7 +7902,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parse-color@npm:^1.0.0":
+"parse-color@npm:1.0.0":
   version: 1.0.0
   resolution: "parse-color@npm:1.0.0"
   dependencies:
@@ -8234,7 +8235,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^1.18.2":
+"prettier@npm:1.18.2":
   version: 1.18.2
   resolution: "prettier@npm:1.18.2"
   bin:
@@ -8994,6 +8995,17 @@ __metadata:
   bin:
     rimraf: ./bin.js
   checksum: 10c0/f1e646f8c567795f2916aef7aadf685b543da6b9a53e482bb04b07472c7eef2b476045ba1e29f401c301c66b630b22b815ab31fdd60c5e1ae6566ff523debf45
+  languageName: node
+  linkType: hard
+
+"rimraf@npm:5.0.5":
+  version: 5.0.5
+  resolution: "rimraf@npm:5.0.5"
+  dependencies:
+    glob: "npm:^10.3.7"
+  bin:
+    rimraf: dist/esm/bin.mjs
+  checksum: 10c0/d50dbe724f33835decd88395b25ed35995077c60a50ae78ded06e0185418914e555817aad1b4243edbff2254548c2f6ad6f70cc850040bebb4da9e8cc016f586
   languageName: node
   linkType: hard
 
@@ -11056,7 +11068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-ext@npm:^3.1.1":
+"web-ext@npm:3.1.1":
   version: 3.1.1
   resolution: "web-ext@npm:3.1.1"
   dependencies:
@@ -11104,7 +11116,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:^3.3.8":
+"webpack-cli@npm:3.3.8":
   version: 3.3.8
   resolution: "webpack-cli@npm:3.3.8"
   dependencies:
@@ -11137,7 +11149,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^4.39.3":
+"webpack@npm:4.39.3":
   version: 4.39.3
   resolution: "webpack@npm:4.39.3"
   dependencies:
