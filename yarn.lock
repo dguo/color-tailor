@@ -530,6 +530,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.14.53":
+  version: 4.17.0
+  resolution: "@types/lodash@npm:4.17.0"
+  checksum: 10c0/4c5b41c9a6c41e2c05d08499e96f7940bcf194dcfa84356235b630da920c2a5e05f193618cea76006719bec61c76617dff02defa9d29934f9f6a76a49291bd8f
+  languageName: node
+  linkType: hard
+
 "@types/minimatch@npm:^3.0.5":
   version: 3.0.5
   resolution: "@types/minimatch@npm:3.0.5"
@@ -551,7 +558,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^10.12.18":
+"@types/node@npm:^10.11.7":
   version: 10.17.60
   resolution: "@types/node@npm:10.17.60"
   checksum: 10c0/0742294912a6e79786cdee9ed77cff6ee8ff007b55d8e21170fc3e5994ad3a8101fea741898091876f8dc32b0a5ae3d64537b7176799e92da56346028d2cbcd2
@@ -571,116 +578,6 @@ __metadata:
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
   checksum: 10c0/8209c937cb39119f44eb63cf90c0b73e7c754209a6411c707be08e50e29ee81356dca1a848a405c8bdeebfe2f5e4f831ad310ae1689eeef65e7445c090c6657d
-  languageName: node
-  linkType: hard
-
-"@vibrant/color@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/color@npm:3.2.1-alpha.1"
-  checksum: 10c0/737602c9a04fd2044333bdd18e84dfcf4a16adae1b6bb8d295294e465115fd135f5a5420b73ef34372ada26938dba622bfe55ef2173662bf392bdd19edc589ab
-  languageName: node
-  linkType: hard
-
-"@vibrant/core@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/core@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/color": "npm:^3.2.1-alpha.1"
-    "@vibrant/generator": "npm:^3.2.1-alpha.1"
-    "@vibrant/image": "npm:^3.2.1-alpha.1"
-    "@vibrant/quantizer": "npm:^3.2.1-alpha.1"
-    "@vibrant/types": "npm:^3.2.1-alpha.1"
-    "@vibrant/worker": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/c578a243f78fe363fd9df86108acb36863e3bc209736632706f133445e3715cd63ed734e19cc4a76fae03ecc24c6882c6e2a6781355d073c092c06f5568f2d65
-  languageName: node
-  linkType: hard
-
-"@vibrant/generator-default@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/generator-default@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/color": "npm:^3.2.1-alpha.1"
-    "@vibrant/generator": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/17572dbf871411d1de6efd13d40a3997d147c2e394e02b8241d6deee867155dcdae7878bdc325d3dba0bf353e4930674b5f322a7d9a1779b2fca52cdefbd2807
-  languageName: node
-  linkType: hard
-
-"@vibrant/generator@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/generator@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/color": "npm:^3.2.1-alpha.1"
-    "@vibrant/types": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/d4bf5871cc4a0f21cad0722688210e2ce33661de0f1493ea264768ae0a59c32e43d833ec5730c2e94a59116e9bad3be1106abb1e3eec6e2fb38b94b243575a9d
-  languageName: node
-  linkType: hard
-
-"@vibrant/image-browser@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/image-browser@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/image": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/00c8bc1bb9614300d91a5b44a25febb29ca6224dae2d772a72373234f4e694f103da8d3ea7929ba21731f322771e3e19927309975033c0d610e34d4a47631c99
-  languageName: node
-  linkType: hard
-
-"@vibrant/image-node@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/image-node@npm:3.2.1-alpha.1"
-  dependencies:
-    "@jimp/custom": "npm:^0.16.1"
-    "@jimp/plugin-resize": "npm:^0.16.1"
-    "@jimp/types": "npm:^0.16.1"
-    "@vibrant/image": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/8e61f9c4b7dd5fe4f3eba88835319f567d2e948870aa3f67210d2a03d9d7559b1f690cd23b8a7577853d5676dedd5aa11082badb53b1918e91f811563789d73c
-  languageName: node
-  linkType: hard
-
-"@vibrant/image@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/image@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/color": "npm:^3.2.1-alpha.1"
-    "@vibrant/types": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/7367d0e1982ed23100884cfa705fe3221f17500a8e5164c9622f725bdd63a967dc7c1d64be6dbe4e6964b81bd167be059520479f2e00cfc3fcf2c965b992c606
-  languageName: node
-  linkType: hard
-
-"@vibrant/quantizer-mmcq@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/quantizer-mmcq@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/color": "npm:^3.2.1-alpha.1"
-    "@vibrant/image": "npm:^3.2.1-alpha.1"
-    "@vibrant/quantizer": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/81d8562f2af2788b47bf9a5d18f1c74c6979ab1fbd1748d92306e3209ff45d18cc257b6415ea284c99d9084b1d2c7222133e88dd04e67ebb09a7649191b98829
-  languageName: node
-  linkType: hard
-
-"@vibrant/quantizer@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/quantizer@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/color": "npm:^3.2.1-alpha.1"
-    "@vibrant/image": "npm:^3.2.1-alpha.1"
-    "@vibrant/types": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/7ec59dc5a3716897d4459cfea1cfdf3c954985a7e3040e2bc3f4f959b5a7e01f8c5dc8f5b49d2ab58239de43ac3569b8155ecaf32a2a8f75c3dd64edd9b75f74
-  languageName: node
-  linkType: hard
-
-"@vibrant/types@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/types@npm:3.2.1-alpha.1"
-  checksum: 10c0/14877f1699556545422be77970d2f218fdef28a56123963249a417a6c374a67b88c57b60c6ac3733aa77891b3a9aae926707453071792463e34a9e7e9133d098
-  languageName: node
-  linkType: hard
-
-"@vibrant/worker@npm:^3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "@vibrant/worker@npm:3.2.1-alpha.1"
-  dependencies:
-    "@vibrant/types": "npm:^3.2.1-alpha.1"
-  checksum: 10c0/c2bcafc15c8e13fbf9d6c299cfec636fbb20a78f603eab6180863d06dd5483c02fda58da8bab59dd2b1e5bef46f9e8273d8c00eba1b8b5c626a72561845dcaad
   languageName: node
   linkType: hard
 
@@ -1623,9 +1520,9 @@ __metadata:
   dependencies:
     eslint: "npm:8.57.0"
     eslint-config-prettier: "npm:9.1.0"
-    font-color-contrast: "npm:11.1.0"
-    image-promise: "npm:6.1.1"
-    node-vibrant: "npm:3.2.1-alpha.1"
+    font-color-contrast: "npm:1.1.1"
+    image-promise: "npm:6.0.2"
+    node-vibrant: "npm:3.1.6"
     parse-color: "npm:1.0.0"
     prettier: "npm:3.2.5"
     rimraf: "npm:5.0.5"
@@ -2593,10 +2490,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"font-color-contrast@npm:11.1.0":
-  version: 11.1.0
-  resolution: "font-color-contrast@npm:11.1.0"
-  checksum: 10c0/912b5bae89703a0b54d8ef07ccc1f804d5efe2e3c126c32c59d94d30aa636e38e2016a520bb16414347e71fcb9e33b6e8d2071b7afac4e07d58c02abd2e3df73
+"font-color-contrast@npm:1.1.1":
+  version: 1.1.1
+  resolution: "font-color-contrast@npm:1.1.1"
+  checksum: 10c0/d4d1e0b8199bc41edaa80640c6da6be1f450ce9dd60958bbee5c5566ecf31f2b16379b46e1762cdcbe2f43fdf8509b68282ebbfd9c264df43eae28274aaa0c72
   languageName: node
   linkType: hard
 
@@ -3064,10 +2961,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-promise@npm:6.1.1":
-  version: 6.1.1
-  resolution: "image-promise@npm:6.1.1"
-  checksum: 10c0/80d3799a8b65cd4fe9d3d1c7e5e6fd2d7451ebb878e233b269332a9d9728f0b7a52179c6805ae027cf1f92b8052bddb33773b86b01a9ea979b763d000a03abba
+"image-promise@npm:6.0.2":
+  version: 6.0.2
+  resolution: "image-promise@npm:6.0.2"
+  checksum: 10c0/5e821d496986f586a1b74ddc16e421cd9dc033ac749d4bd234637c9d1e0e5b8b0c3967fa04ced3277ab4d4101dcc531e6554a6245a899293c2dbd0fe01fc8ea5
   languageName: node
   linkType: hard
 
@@ -3743,7 +3640,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21":
+"lodash@npm:^4.17.20, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -4248,18 +4145,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-vibrant@npm:3.2.1-alpha.1":
-  version: 3.2.1-alpha.1
-  resolution: "node-vibrant@npm:3.2.1-alpha.1"
+"node-vibrant@npm:3.1.6":
+  version: 3.1.6
+  resolution: "node-vibrant@npm:3.1.6"
   dependencies:
-    "@types/node": "npm:^10.12.18"
-    "@vibrant/core": "npm:^3.2.1-alpha.1"
-    "@vibrant/generator-default": "npm:^3.2.1-alpha.1"
-    "@vibrant/image-browser": "npm:^3.2.1-alpha.1"
-    "@vibrant/image-node": "npm:^3.2.1-alpha.1"
-    "@vibrant/quantizer-mmcq": "npm:^3.2.1-alpha.1"
+    "@jimp/custom": "npm:^0.16.1"
+    "@jimp/plugin-resize": "npm:^0.16.1"
+    "@jimp/types": "npm:^0.16.1"
+    "@types/lodash": "npm:^4.14.53"
+    "@types/node": "npm:^10.11.7"
+    lodash: "npm:^4.17.20"
     url: "npm:^0.11.0"
-  checksum: 10c0/ff0b014e0829074fd764d7b8136e69ddafb275681464cf347fbabbed68c5becaba71e6f187f1b1540f3bce3de9fc3d15796af425ffc2b6d34ab66f03b1ac61aa
+  checksum: 10c0/2de642c381e6507b0d1d6ca6cea404913dcf875711f71f6effda2af3ee1b552b55888af1b1d35c9b038e6f9c2af2e2e4c98e1ee2fe5db1e72e830b6539eb24c3
   languageName: node
   linkType: hard
 
