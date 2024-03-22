@@ -19,12 +19,12 @@
     },
     "permissions": ["<all_urls>", "tabs", "theme"],
     "background": {
-        "scripts": ["js/background.js"]
+        "scripts": ["background.js"]
     },
     "content_scripts": [
         {
             "matches": ["*://*/*"],
-            "js": ["js/content.js"]
+            "js": ["content.js"]
         }
     ]
 }

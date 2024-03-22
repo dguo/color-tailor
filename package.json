@@ -15,15 +15,14 @@
         "url": "https://github.com/dguo/color-tailor.git"
     },
     "scripts": {
-        "build": "yarn run clean && webpack --mode=development",
-        "build:release": "yarn run clean && webpack --mode=production",
-        "build:watch": "yarn run clean && webpack --mode=development --watch",
-        "clean": "rimraf extension/js",
+        "build": "parcel build source/manifest.json --target webext-prod",
+        "build:dev": "parcel watch source/manifest.json --host localhost --target webext-dev",
+        "clean": "rimraf dist",
         "format": "prettier --write \"./**/*.{json,js}\"",
-        "format:check": "prettier --list-different \"./**/*.{json,js}\"",
-        "lint": "eslint src/**/*",
-        "release": "yarn run format:check && yarn run lint && yarn run build:release && web-ext lint && web-ext build --overwrite-dest",
-        "start": "yarn install && yarn run build:watch"
+        "format:check": "prettier --check \"./**/*.{json,js}\"",
+        "lint": "eslint source/**/*",
+        "release": "yarn install && yarn run format:check && yarn run lint && yarn run clean && yarn run build && web-ext lint && web-ext build --overwrite-dest && git archive -o web-ext-artifacts/source-code.zip HEAD",
+        "start": "yarn install && yarn run clean && concurrently --names \"parcel ,web-ext\" --timestamp-format HH:mm:ss.SSS -c \"yellow,green\" --prefix \"{name} | {time} | \" -s first \"yarn run build:dev\" \"wait-on dist/manifest.json && web-ext run --no-reload --firefox=firefoxdeveloperedition\""
     },
     "dependencies": {
         "font-color-contrast": "1.1.1",
@@ -32,13 +31,18 @@
         "parse-color": "1.0.0"
     },
     "devDependencies": {
+        "@parcel/config-webextension": "2.12.0",
+        "@parcel/core": "2.12.0",
+        "concurrently": "8.2.2",
         "eslint": "8.57.0",
         "eslint-config-prettier": "9.1.0",
+        "parcel": "2.12.0",
         "prettier": "3.2.5",
+        "punycode": "1.4.1",
+        "querystring-es3": "0.2.1",
         "rimraf": "5.0.5",
-        "web-ext": "7.11.0",
-        "webpack": "5.90.3",
-        "webpack-cli": "5.1.4"
+        "wait-on": "7.2.0",
+        "web-ext": "7.11.0"
     },
     "eslintConfig": {
         "env": {
@@ -59,5 +63,20 @@
         "singleQuote": true,
         "tabWidth": 4,
         "trailingComma": "none"
+    },
+    "targets": {
+        "webext-dev": {
+            "distDir": "dist",
+            "sourceMap": {
+                "inline": true,
+                "inlineSources": true
+            }
+        },
+        "webext-prod": {
+            "distDir": "dist"
+        }
+    },
+    "webExt": {
+        "sourceDir": "dist"
     }
 }
