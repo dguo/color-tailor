@@ -31,7 +31,7 @@ jobs:
       - name: Lint the code
         run: yarn run lint
       - name: Build the code
-        run: yarn run build:release
+        run: yarn run build
       - name: Lint the extension
         run: yarn run web-ext lint
       - name: Build the extension
