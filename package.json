@@ -18,9 +18,9 @@
         "build": "parcel build source/manifest.json --target webext-prod",
         "build:dev": "parcel watch source/manifest.json --host localhost --target webext-dev",
         "clean": "rimraf dist",
-        "format": "prettier --write \"./**/*.{json,js}\"",
-        "format:check": "prettier --check \"./**/*.{json,js}\"",
-        "lint": "eslint source/**/*.js",
+        "format": "prettier --write \"./**/*.{json,ts}\"",
+        "format:check": "prettier --check \"./**/*.{json,ts}\"",
+        "lint": "eslint source/**/*.ts",
         "release": "yarn install && yarn run format:check && yarn run lint && yarn run clean && yarn run build && web-ext lint && web-ext build --overwrite-dest && git archive -o web-ext-artifacts/source-code.zip HEAD",
         "start": "yarn install && yarn run clean && concurrently --names \"parcel ,web-ext\" --timestamp-format HH:mm:ss.SSS -c \"yellow,green\" --prefix \"{name} | {time} | \" -s first \"yarn run build:dev\" \"wait-on dist/manifest.json && web-ext run --no-reload --firefox=firefoxdeveloperedition\""
     },
@@ -33,6 +33,7 @@
     "devDependencies": {
         "@parcel/config-webextension": "2.12.0",
         "@parcel/core": "2.12.0",
+        "@types/firefox-webext-browser": "120.0.3",
         "concurrently": "8.2.2",
         "eslint": "8.57.0",
         "eslint-config-prettier": "9.1.0",
@@ -41,6 +42,8 @@
         "punycode": "1.4.1",
         "querystring-es3": "0.2.1",
         "rimraf": "5.0.5",
+        "typescript": "5.4.3",
+        "typescript-eslint": "7.3.1",
         "wait-on": "7.2.0",
         "web-ext": "7.11.0"
     },
