@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2020",
+        "types": ["firefox-webext-browser"]
+    },
+    "include": ["source/**/*"]
+}
