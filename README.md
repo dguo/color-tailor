@@ -4,7 +4,7 @@
 [![CI status](https://github.com/dguo/color-tailor/workflows/CI/badge.svg)](https://github.com/dguo/color-tailor/actions?query=branch%3Amain)
 
 A [dynamic Firefox
-theme](https://developer.mozilla.org/en-US/Add-ons/Themes/Theme_concepts#Dynamic_themes)
+theme](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts#Dynamic_themes)
 that changes the theme to the current website's "primary" color. Available in [Firefox
 Add-ons](https://addons.mozilla.org/en-US/firefox/addon/color-tailor/).
 
